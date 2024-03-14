@@ -1,0 +1,13 @@
+<label for="sort">Sort by:</label>
+<span id="sort">
+<button value="fruit" (click) = "updateSorting('price')">Price low-high</button>
+<button value="vegetable" (click) = "updateSorting('ab')">A-Z</button>
+</span>
+<hr/>
+<div>
+<app-shopitem
+ *ngFor="let item of items | async"
+ [item]="item"
+ (update)="updateCart($event)"
+ ></app-shopitem>
+</div>

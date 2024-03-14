@@ -1,0 +1,3 @@
+<ng-template [ngIf]="item" id="item.id" >
+    <li><p>{{item.name}}</p><p></p><p>£{{item.price}}</p><button class="quantity-btn" (click)="decrement()">-</button>{{item.cart}}<button class="quantity-btn" (click)="increment()">+</button></li>
+</ng-template>

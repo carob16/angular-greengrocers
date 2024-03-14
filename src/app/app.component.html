@@ -1,9 +1,13 @@
 <header id="store">
-  <h1>Greengrocers</h1>
-  <!-- your store here -->
+ <div><h1>Greengrocers</h1>
+  <app-filter style="width:100vw;" (filter)="saveFilterOption($event)" (sort) = "saveSortOption($event)"></app-filter></div> 
+  <app-shoplist *ngIf="filter == filterNone" (newitem)="addToCart($event)" [sort]="sort" />
+  <app-fruits *ngIf="filter == filterFruits" (newitem)="addToCart($event)" [sort]="sort" />
+  <app-vegetables *ngIf="filter == filterVegetables" (newitem)="addToCart($event)" [sort]="sort"/>
 </header>
 <main id="cart">
   <h2>Your Cart</h2>
-  <!-- your cart here -->
-  <!-- your total here -->
+  <app-cart [cart] = "cart" (update)="updateCart($event)"/>
+  <app-total [sum] = "total"/>
 </main>
+

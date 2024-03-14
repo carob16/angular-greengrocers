@@ -80,7 +80,7 @@ button {
 app-cart {
   display: block;
   box-sizing: border-box;
-  min-width: 320px;
+  min-width: 400px;
   height: 100%;
   padding: 0 1rem;
 
@@ -107,10 +107,10 @@ app-cart {
 }
 
 .cart--item-list li {
-  padding: 1rem 0;
+  padding: 0.5rem;
 
   display: grid;
-  grid-template-columns: 24px minmax(150px, 1fr) repeat(3, auto);
+  grid-template-columns: 24px minmax(100px, 1fr) 50px repeat(3, auto);
   grid-gap: 0.5rem;
   align-items: center;
 

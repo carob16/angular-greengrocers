@@ -1,0 +1,6 @@
+
+<ul class ="cart--item-list"><app-cart-item 
+*ngFor="let item of cart"
+[item]="item"
+(update) = "updateCart($event)"
+></app-cart-item></ul>
